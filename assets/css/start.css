@@ -604,23 +604,23 @@ section {
   transform: rotate(-12deg);
 }
 #section-one .bowl-left {
-  width: 12vw;
+  width: 16vw;
   left: 7vw;
   bottom: 3vh;
 }
 #section-one .bowl-left-bits {
-  width: 12vw;
+  width: 16vw;
   bottom: 1vh;
 }
 #section-one .bowl-right {
-  width: 5vw;
+  width: 10vw;
   bottom: 10vh;
   right: 20vw;
 }
 #section-one .bowl-right-bits {
-  width: 8vw;
+  width: 15vw;
   bottom: 0;
-  left: -1.5vw;
+  left: -2.5vw;
 }
 #section-one .lightning {
   width: 7vw;
