@@ -212,7 +212,7 @@
 <div class="animated onion"><img src="assets/images/onion.svg"></div>
 
      </div>
-<div class="container"><div class="row justify-content-center"><div class="col-md-12"><h2 class="text-center mt-8 mb-8" id="title-stunning1">Our Dishes</h2></div>
+<div class="container"><div class="row justify-content-center"><div class="col-md-12"><h2 class="text-center mb-8" id="title-stunning1">Our Dishes</h2></div>
 
   
 
@@ -354,8 +354,8 @@
 
     <section id="section-five" data-scroll>
 
-      <div class="bg-wrap">
-        <div class="animated camel" id="camel2"><?xml version="1.0" encoding="utf-8"?>
+     
+        <div class="animated camelka" id="camel2"><?xml version="1.0" encoding="utf-8"?>
           <!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="0 0 349.3 402.7" style="enable-background:new 0 0 349.3 402.7;" xml:space="preserve">
@@ -404,7 +404,7 @@
           </svg>
           </div>
 
-      </div>
+   
       <div class="container d-flex justify-content-center pb-10">
 
 <div class="row w-100 justify-content-center">
@@ -741,13 +741,14 @@ tt
 
 .from('#camel1', {duration:0.2, xPercent:-80
 })
-.from('.aubergine', {yPercent:80
+/*.from('.aubergine', {y:80
 })
+.from('.fruit', {duration:0.2, y:100
+})
+*/
 .from('#location-container img', {rotation:12
-})
-
-.from('.fruit', {duration:0.2, yPercent:80
 });
+
 
 
 
@@ -760,9 +761,8 @@ const tss = gsap.timeline({
     pin: false,
     scrub: 1,
     start: "top top",
-    end: "bottom top",
-markers:true,
- id:"camel"
+    end: "bottom top"
+
 
    
   }
@@ -777,6 +777,7 @@ const ta = gsap.timeline({
    //pinSpacing:false,
     start: "top top",
     end: "bottom top",
+   
 
       onEnter() {
         document.querySelector("#icon1").classList.add('active');
@@ -820,8 +821,10 @@ const tc = gsap.timeline({
     scrub: 1,
    //pinSpacing:false,
     start: "top top",
-    end: "bottom top"
-    //toggleActions: "play reset play complete"
+    end: "bottom top",
+    //markers:true,
+    //id:"big",
+    //toggleActions: "play reset play reverse"
  
   }
 });
@@ -908,7 +911,7 @@ tc
     scroller.destroy();
 ScrollTrigger.removeEventListener('refresh', () => scroller.update());
   let triggers = ScrollTrigger.getAll();
-
+console.log("i am killed");
   triggers.forEach( trigger => {
     trigger.kill();
   });
@@ -957,7 +960,9 @@ ScrollTrigger.removeEventListener('refresh', () => scroller.update());
     history.scrollRestoration = 'manual';
 } else {
     window.onbeforeunload = function () {
-       scroller.scrollTo(0, 0);
+       //scroller.scrollTo(0, 0);
+       gsap.kill(); 
+       unload();
     }
 }
 

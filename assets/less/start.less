@@ -25,7 +25,9 @@ html{
   right: 0;
   bottom: 0;
 }
-
+.smooth-scroll {
+  overflow-y: hidden !important;
+}
 .has-scroll-smooth [data-scroll-container]{
   overflow-x:hidden;
 }
@@ -176,8 +178,8 @@ height:20vw;
   }
 
   #section-two{
-    min-height:50vh;
-height:auto;
+    min-height:100vh;
+
     background-color:@pink;
 
     h2{
@@ -212,6 +214,7 @@ padding-bottom:0.5em;
 
   
   #section-three{
+    margin-top:-10px;
     height:auto;
     min-height:50vh;
     background-color:@pink;
@@ -342,10 +345,15 @@ margin-bottom:1.5em;
 color:@black;
 
     background-color:@white;
-
+.bg-wrap{
+top:0;
+height:100vh;
+  position:absolute;
+  overflow:hidden;
+}
     h2{
     margin-bottom:0.8em;}
-    .camel{
+    .camelka{
 
       width:18vw;
       transform:rotate(-90deg);
@@ -433,7 +441,10 @@ background:url("../images/arrow-left.svg") 0 0 no-repeat;
     background:url("../images/arrow-right.svg") 0 0 no-repeat;
   }
 }
+.rating{
 
+  margin-bottom:1em;
+}
 .star{
   width:15px;
   margin-right:10px;
@@ -501,6 +512,7 @@ img{
 }
 
 .copyright{
+  margin-top:1.5em;
   font-size:15px;
 }
 
@@ -678,4 +690,16 @@ transition:all 0.3s;
 
 .st0.wiggle{
   transform-origin:50% 50%;
+}
+
+#icon1, #icon2, #icon3{
+margin-right:12px;
+  max-width:150px;
+ 
+}
+#icon2{
+  max-width:100px;
+}
+#icon1{margin-top:-15px;
+  max-width:120px;
 }
