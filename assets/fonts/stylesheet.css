@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'GintoNord';
+    src: url('ABCGintoNord-Bold.otf');
+    src: url('ABCGintoNord-Bold.woff2') format('woff2'),
+         url('ABCGintoNord-Bold.woff') format('woff'),
+        /* url('ABCGintoNord-Bold.ttf') format('truetype'),
+         url('ABCGintoNord-Bold.svg#ABCGintoNord-Bold') format('svg');*/;
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Agrandir';
+    src: url('Agrandir-Regular.otf');
+    src:  url('Agrandir-Regular.woff2') format('woff2'),
+         url('Agrandir-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'AgrandirBold';
+    src: url('PPAgrandir-Medium.eot');
+    src:  url('PPAgrandir-Medium.woff2') format('woff2'),
+    url('PPAgrandir-Medium.ttf') format('truetype'),
+         url('PPAgrandir-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
