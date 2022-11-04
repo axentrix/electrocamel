@@ -668,6 +668,9 @@ function(){
 var	wideScreen = window.matchMedia("(min-width: 992px)");
   var	narrowScreen = window.matchMedia("(max-width: 991px)");
 
+  let triggerState;
+
+
   causeRepaintsOn = $("h1, h2, h3, h4, h5, h6, p");
 
 
@@ -764,7 +767,7 @@ $(window).resize(function() {
       // desktop
       "(min-width: 991px)": function() {
 
-
+        triggerState = true;
 
 
 
@@ -826,7 +829,7 @@ const tt = gsap.timeline({
   scrollTrigger: {
     trigger: "#section-two",
     scroller:".smooth-scroll",
-    pin: true,
+    pin: triggerState,
     scrub: false,
 
     start: "top top",
@@ -902,7 +905,7 @@ const tc = gsap.timeline({
   scrollTrigger: {
     trigger: "#section-five",
     scroller:".smooth-scroll",
-    pin: true,
+    pin: triggerState,
     scrub: 1,
    //pinSpacing:false,
     start: "top top",
@@ -931,12 +934,44 @@ tc
 
       },
 
+      "(max-width: 1499px) and (min-width: 993px)": function() {
+        const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#section-one",
+    scroller:".smooth-scroll",
+    pin: false,
+    scrub: 1,
+   //pinSpacing:false,
+    start: "top top",
+    end: "bottom top",
+    //markers:true,
+    //id:"big",
+    //toggleActions: "play reset play reverse"
+ 
+  }
+});
+      tl
+  .to(".hummus", {
+        
+        duration:3,
+        
+       css: {scale:0.7, rotation:270+"deg"},
+    
+        ease: "power5.easeIn"
+       }, "-=1")
+ 
+  
+      },
+
+
+
+
       // mobile
       "(max-width: 992px)": function() {
         // The ScrollTriggers created inside these functions are segregated and get
         // reverted/killed when the media query doesn't match anymore. 
 
-        
+        triggerState=false;
 
          return function() {
           //gsap.kill(); 

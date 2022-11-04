@@ -1220,6 +1220,9 @@ section {
   }
 }
 @media (max-width: 1499px) {
+  #section-four .bg-wrap {
+    display: none;
+  }
   #section-one .hummus {
     position: relative;
     order: 2;
@@ -1227,7 +1230,7 @@ section {
     width: 24vw;
   }
   #section-five .camelka {
-    top: 6%;
+    top: 2%;
   }
   #section-two .camel {
     width: 18vw;
@@ -1316,6 +1319,9 @@ section {
   }
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
+  .smalltext {
+    font-size: 12px;
+  }
   .mobile-carousel .col-md-4 {
     height: 400px;
   }
