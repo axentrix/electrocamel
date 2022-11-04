@@ -52,12 +52,13 @@ a:focus {
 .btn-primary {
   border: none;
   color: #501792;
-  font-size: 40px;
   /*background:url("../images/btn-bg.svg") 0 0 no-repeat;*/
   background-color: #d7ff00;
   clip-path: polygon(0 8%, 100% 0%, 89% 90%, 6% 82%);
-  width: 307px;
-  height: 123px;
+  font-size: 4.3vh;
+  min-width: 150px;
+  width: 18.3vw;
+  height: 15.3vh;
   position: relative;
 }
 .btn-primary:before {
@@ -589,7 +590,21 @@ section {
   overflow: hidden;
   position: absolute;
 }
+#section-one .hero-elements {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#section-one .hero-elements .smooth-logo {
+  flex: 0 1 auto;
+}
+#section-one .hero-elements .hero {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+}
 #section-one .container {
+  justify-content: center;
   height: 100vh;
 }
 #section-one .lightnings {
@@ -618,8 +633,8 @@ section {
   right: 20vw;
 }
 #section-one .bowl-right-bits {
-  width: 15vw;
-  bottom: 0;
+  width: 11vw;
+  bottom: -5%;
   left: -2.5vw;
 }
 #section-one .lightning {
@@ -652,6 +667,10 @@ section {
   top: 40vh;
   right: -2vw;
 }
+.mobile-carousel {
+  display: flex;
+  flex-wrap: wrap;
+}
 #section-three {
   margin-top: -10px;
   height: auto;
@@ -675,8 +694,8 @@ section {
 #section-three .lightnings {
   width: 15vw;
   z-index: 77777;
-  top: 5vh;
-  left: 3vw;
+  top: -30px;
+  left: 5vw;
 }
 #section-three .onion {
   width: 15vw;
@@ -709,12 +728,9 @@ section {
   font-size: 15px;
 }
 #section-three .menu img {
-  max-width: 400px;
-}
-#section-three .menu .btn-primary {
-  position: absolute;
-  bottom: -60px;
-  left: 60%;
+  max-width: 98%;
+  margin: auto;
+  position: relative;
 }
 #section-three .menu h5 {
   color: #d7ff00;
@@ -724,6 +740,7 @@ section {
   background-color: #d7ff00;
   margin-top: -5%;
   overflow: hidden;
+  z-index: 4;
 }
 #section-four h2 {
   margin-bottom: 0.8em;
@@ -774,6 +791,8 @@ section {
   font-style: italic;
 }
 #section-six {
+  z-index: 3;
+  margin-top: -50px;
   min-height: unset;
   min-height: 50vh;
   background-color: #00ffff;
@@ -799,7 +818,12 @@ section {
   transition: all 1.5s;
 }
 .smooth-logo {
+  display: flex;
   width: 200px;
+  align-items: flex-start;
+}
+.smooth-logo img {
+  max-width: 100%;
 }
 .animated {
   position: absolute;
@@ -857,28 +881,29 @@ section {
   justify-content: center;
   text-transform: uppercase;
   color: #501792;
-  font-size: 26px;
+  font-family: "Agrandir";
+  font-size: 2.3vh;
   text-align: center;
 }
 .alabel.label-one {
   z-index: -1;
-  bottom: -60px;
-  left: 0;
+  bottom: -41px;
+  left: 16%;
   padding-left: 20px;
   transform: rotate(-12deg);
   clip-path: polygon(0 0, 100% 9%, 100% 94%, 19% 100%);
-  width: 300px;
-  height: 96px;
+  width: 10.0vmax;
+  height: 66px;
 }
 .alabel.label-two {
   z-index: 5;
-  top: -56px;
+  top: -52px;
   right: -5%;
   padding-top: 12px;
   transform: rotate(12deg);
   clip-path: polygon(0% 29%, 90% 9%, 86% 100%, 8% 96%);
-  width: 325px;
-  height: 105px;
+  width: 11.3vmax;
+  height: 85px;
 }
 #location-container {
   position: relative;
@@ -1162,6 +1187,7 @@ section {
 #icon3 {
   margin-right: 12px;
   max-width: 150px;
+  min-height: 120px;
 }
 #icon2 {
   max-width: 100px;
@@ -1173,20 +1199,150 @@ section {
 .st0.strokeanim {
   fill: #501792 !important;
 }
-@media (max-width: 1550px) {
+.btn-primary {
+  position: absolute;
+  bottom: -60px;
+  left: 60%;
+  min-width: 200px;
+}
+@media (min-width: 1500px) {
+  #section-one .lightnings {
+    width: 15vw;
+    left: 2vw;
+    top: 15vh;
+  }
+  #section-five .camelka {
+    top: 6%;
+  }
+  .mushroom,
+  .tomato {
+    display: none;
+  }
+}
+@media (max-width: 1499px) {
+  #section-one .hummus {
+    position: relative;
+    order: 2;
+    margin: auto;
+    width: 24vw;
+  }
+  #section-five .camelka {
+    top: 6%;
+  }
+  #section-two .camel {
+    width: 18vw;
+    transform: rotate(60deg);
+    top: 6%;
+    left: -4vw;
+  }
+  .btn-primary {
+    height: 10.3vh;
+    font-size: 3.3vh;
+  }
+  #section-four h5 {
+    flex-direction: column;
+    text-align: center;
+  }
+  #icon1,
+  #icon2,
+  #icon3 {
+    height: 120px;
+    margin-top: 0px !important;
+    margin-bottom: 20px;
+  }
+  #section-four .content {
+    padding: 0 !important;
+  }
+  .aubergine,
+  .fruit {
+    display: none;
+  }
+  .smooth-logo {
+    margin: auto;
+  }
   #section-one .lightnings {
     width: 17vw;
     top: 20vh;
     left: 2vw;
     height: 20vw;
   }
+  #section-one .container,
+  .hero-elements {
+    height: unset !important;
+  }
+  .smooth-scroll {
+    overflow-y: visible !important;
+  }
+  section {
+    height: unset !important;
+    min-height: 100vh;
+  }
+  .alabel {
+    display: none;
+  }
+  .smooth-logo {
+    margin: auto;
+    width: 30vw;
+  }
+  .bg-wrap {
+    position: relative;
+    all: unset;
+  }
 }
-@media screen and (orientation: portrait) {
+@media (max-width: 1360px) {
+  .btn-primary {
+    font-size: 3.3vh;
+  }
+  .smooth-logo {
+    margin: auto;
+    width: 20vw;
+  }
+  p {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  #section-two .camel {
+    width: 15vw;
+    top: 10vh;
+    right: -10%;
+  }
+  #location-container .btn-info {
+    left: 33%;
+  }
+  .bg-wrap {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .mobile-carousel .col-md-4 {
+    height: 400px;
+  }
+  .slick-slide h5 {
+    margin-top: 20px;
+  }
+  h1 {
+    font-size: 65px;
+    margin-top: 24px;
+  }
+  .smooth-logo {
+    margin: auto;
+    width: 50vw;
+  }
+  #section-one {
+    justify-content: center;
+  }
   #section-one .hummus {
+    position: relative;
+    order: 2;
+    margin: auto;
     width: 44vw;
-    right: -1vw;
-    top: -2vh;
-    transform: rotate(-12deg);
+  }
+  #location-container .btn-info {
+    position: absolute;
+    bottom: -3vh;
+    left: 23vw;
   }
   h1 {
     font-size: 18vmin;
@@ -1247,8 +1403,8 @@ section {
   }
   #section-three .menu .btn-primary {
     position: absolute;
-    bottom: -60px;
-    left: 10%;
+    bottom: -40px;
+    left: 28%;
   }
   #section-three .smalltext {
     width: 60vw;
@@ -1277,14 +1433,63 @@ section {
     width: 28vw;
     transform: rotate(-90deg);
     right: -22px;
-    top: 31%;
+    top: 10%;
   }
   #section-six .container {
     padding-left: 2em;
     padding-right: 2em;
   }
-  #location-container img {
-    transform: rotate(-4deg);
-    max-width: 100%;
-  }
+}
+#location-container img {
+  max-width: 100%;
+}
+.slick-dots {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: 0;
+  transition: all 0.3s;
+  transform: scale(1, 1);
+}
+.slick-dots li button:before {
+  content: "";
+}
+.slick-dots li:not(.slick-active) button {
+  transition: all 0.3s;
+  transform: scale(0.7, 0.7);
+  background: #ffffff;
+}
+.slick-dots li.slick-active button {
+  transition: all 0.3s;
+  transform: scale(1.2, 1.2);
+  background: #501792;
 }
