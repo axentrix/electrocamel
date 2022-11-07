@@ -1353,7 +1353,7 @@ section {
     width: 180px;
     height: 69px;
     font-size: 14px;
-    left: 68%;
+    left: 60%;
   }
 }
 @media screen and (max-width: 1360px) and (min-width: 992px) {
@@ -1437,7 +1437,7 @@ section {
     width: 155px;
     height: 69px;
     font-size: 14px;
-    left: 68%;
+    left: 60%;
     right: 0;
   }
   .smalltext {
