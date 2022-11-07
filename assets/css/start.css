@@ -882,7 +882,7 @@ section {
   text-transform: uppercase;
   color: #501792;
   font-family: "Agrandir";
-  font-size: 2.3vh;
+  font-size: 18px;
   text-align: center;
 }
 .alabel.label-one {
@@ -892,7 +892,7 @@ section {
   padding-left: 20px;
   transform: rotate(-12deg);
   clip-path: polygon(0 0, 100% 9%, 100% 94%, 19% 100%);
-  width: 10.0vmax;
+  width: 14.5vw;
   height: 66px;
 }
 .alabel.label-two {
@@ -902,7 +902,7 @@ section {
   padding-top: 12px;
   transform: rotate(12deg);
   clip-path: polygon(0% 29%, 90% 9%, 86% 100%, 8% 96%);
-  width: 11.3vmax;
+  width: 14.5vw;
   height: 85px;
 }
 #location-container {
@@ -1194,7 +1194,6 @@ section {
 }
 #icon1 {
   margin-top: -15px;
-  max-width: 120px;
 }
 .st0.strokeanim {
   fill: #501792 !important;
@@ -1203,7 +1202,7 @@ section {
   position: absolute;
   bottom: -60px;
   left: 60%;
-  min-width: 200px;
+  min-width: 250px;
 }
 @media (min-width: 1500px) {
   #section-one .lightnings {
@@ -1219,7 +1218,7 @@ section {
     display: none;
   }
 }
-@media (max-width: 1499px) {
+@media screen and (max-width: 1499px) {
   #section-four .bg-wrap {
     display: none;
   }
@@ -1281,7 +1280,7 @@ section {
     min-height: 100vh;
   }
   .alabel {
-    display: none;
+    /*display:none;*/
   }
   .smooth-logo {
     margin: auto;
@@ -1289,7 +1288,6 @@ section {
   }
   .bg-wrap {
     position: relative;
-    all: unset;
   }
 }
 @media (max-width: 1360px) {
@@ -1314,11 +1312,134 @@ section {
   #location-container .btn-info {
     left: 33%;
   }
-  .bg-wrap {
+  #section-two .bg-wrap,
+  #section-three .bg-wrap,
+  #section-four .bg-wrap,
+  #section-five .bg-wrap {
     display: none;
   }
 }
+@media screen and (max-width: 1360px) and (orientation: landscape) {
+  #section-one .bg-wrap {
+    display: flex !important;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  #section-one .bg-wrap .bowl-left {
+    width: 16vw;
+    left: 2vw;
+    bottom: 3vh;
+  }
+  #section-one .bg-wrap .bowl-right {
+    width: 8vw;
+    bottom: 10vh;
+    right: 5vw;
+  }
+  #section-one .bg-wrap .bowl-right-bits {
+    display: none;
+  }
+  #section-one .bg-wrap .bowl-left-bits {
+    display: none;
+  }
+  #section-one .bg-wrap .lightning-right {
+    display: none;
+  }
+  .alabel.label-one {
+    font-size: 14px;
+  }
+  .alabel.label-two {
+    top: 0;
+    width: 180px;
+    height: 69px;
+    font-size: 14px;
+    left: 68%;
+  }
+}
+@media screen and (max-width: 1360px) and (min-width: 992px) {
+  .alabel.label-two {
+    left: 90%;
+  }
+}
+@media screen and (max-width: 1280px) and (min-width: 861px) {
+  #section-one .lightnings {
+    width: 22vw;
+    top: 5vh;
+    left: 11vw;
+    height: 20vw;
+  }
+}
+@media screen and (max-width: 861px) {
+  h1 {
+    font-size: 11vmin;
+  }
+}
 @media screen and (max-width: 1024px) and (orientation: portrait) {
+  .item .content img {
+    max-width: 34px;
+  }
+  .btn-primary {
+    position: absolute;
+    bottom: -40px;
+    left: 17%;
+    width: 260px;
+    height: 79px;
+    font-size: 28px;
+  }
+  .smooth-logo {
+    padding-bottom: 70px;
+  }
+  #section-one .bg-wrap {
+    display: flex !important;
+    width: 100%;
+    height: 100%;
+    order: 2;
+  }
+  #section-one .bg-wrap .lightning {
+    display: none;
+  }
+  #section-one .bg-wrap .lightnings {
+    width: 25vw;
+    top: 25vh;
+    left: 5vw;
+    height: 20vw;
+  }
+  #section-one .bg-wrap .bowl-left-bits {
+    display: none;
+  }
+  #section-one .bg-wrap .bowl-right-bits {
+    display: none;
+  }
+  #section-one .bg-wrap .bowl-left {
+    bottom: -2%;
+    width: 32vw;
+    left: -50px;
+  }
+  #section-one .bg-wrap .bowl-right {
+    right: -20px;
+  }
+  #section-one .container {
+    height: unset;
+  }
+  #section-one .hero-elements {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .alabel.label-one {
+    width: 160px;
+    height: 66px;
+    font-size: 14px;
+    left: 0;
+    bottom: -25%;
+  }
+  .alabel.label-two {
+    width: 155px;
+    height: 69px;
+    font-size: 14px;
+    left: 68%;
+    right: 0;
+  }
   .smalltext {
     font-size: 12px;
   }
@@ -1329,7 +1450,6 @@ section {
     margin-top: 20px;
   }
   h1 {
-    font-size: 65px;
     margin-top: 24px;
   }
   .smooth-logo {
@@ -1342,8 +1462,8 @@ section {
   #section-one .hummus {
     position: relative;
     order: 2;
-    margin: auto;
-    width: 44vw;
+    margin: 90px auto;
+    width: 40vw;
   }
   #location-container .btn-info {
     position: absolute;
@@ -1351,7 +1471,7 @@ section {
     left: 23vw;
   }
   h1 {
-    font-size: 18vmin;
+    font-size: 14vmin;
   }
   #section-one .lightnings {
     width: 45vw;
@@ -1359,14 +1479,17 @@ section {
     left: 2vw;
     height: 20vw;
   }
-  .alabel.label-two {
-    transform: scale(0.7, 0.7);
-    top: -86px;
-  }
-  .alabel.label-one {
-    transform: scale(0.7, 0.7);
-    bottom: -80px;
-  }
+  /*.alabel.label-two{
+transform:scale(0.7, 0.7);
+  top:-86px;
+}
+
+.alabel.label-one{
+  transform:scale(0.7, 0.7);
+  bottom:-80px;
+
+}
+*/
   #section-one .bowl-left {
     width: 42vw;
     left: 7vw;
@@ -1429,7 +1552,8 @@ section {
     margin-bottom: 1em;
   }
   .mushroom,
-  .tomato {
+  .tomato,
+  .aubergine {
     display: none;
   }
   #section-four h5 {
