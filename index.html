@@ -648,11 +648,11 @@ function(){
   scroller.on("scroll", ScrollTrigger.update);
 
   ScrollTrigger.scrollerProxy(pageContainer, {
-    scrollTop(value) {
-      return arguments.length
-        ? scroller.scrollTo(value, 0, 0)
-        : scroller.scroll.instance.scroll.y;
-    },
+  //  scrollTop(value) {
+  //    return arguments.length
+   //     ? scroller.scrollTo(value, 0, 0)
+  //      : scroller.scroll.instance.scroll.y;
+  //  },
     getBoundingClientRect() {
       return {
         left: 0,
