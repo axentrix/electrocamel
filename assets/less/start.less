@@ -123,7 +123,7 @@ font-size:105px;
 
     background-color:@purple;
 justify-content:flex-start;
-
+align-items:center;
 .bg-wrap{overflow:hidden;
   position:absolute;
 }
@@ -769,18 +769,12 @@ margin-right:12px;
 
 
 
-
 #section-four{
   .bg-wrap{
     display:none;
   }
 }
-  #section-one .hummus {
-    position: relative;
-    order: 2;
-    margin: auto;
-  width:24vw;
-  }
+ 
   #section-five .camelka {
   
     top:2%;
@@ -914,19 +908,46 @@ h2{
   .bg-wrap{
 
     display:flex !important;
-    display: flex;
-    width: 100%;
+    
+    width: 80vw;
     height: 100%;
-    .bowl-left {
-      width: 16vw;
-      left: 2vw;
-      bottom: 3vh;
-  }
-  .bowl-right {
-      width: 8vw;
-      bottom: 10vh;
-      right: 5vw;
-  }
+justify-content:center;
+align-items:center;
+
+
+    .bowl-left{   bottom: 10%;
+      width: 40vmin;
+      margin-left:-50vmin;
+      left: 50%;
+      z-index:21;
+      transform:unset !important;
+    }
+    .hummus {
+       
+     margin:unset !important;
+      left:unset;
+      margin-right:auto;
+      bottom:2%;
+    width:50vmin;
+    z-index:22;
+    right:unset;
+    top:unset;
+    transform:unset !important;
+    }
+    
+    .bowl-right{z-index:20;
+      bottom: 10%;
+      width: 30vmin;
+      margin-left:15vmin;
+      left: 50%;
+      right:unset;
+      transform:unset !important;
+    }
+
+
+
+
+
     .bowl-right-bits{
       display:none;
     }
@@ -1004,8 +1025,8 @@ width: 22vw;
  #section-one .bg-wrap{
 
 display:flex !important;
-width:100%;
-
+width:90vw;
+justify-content:center;
 height:100%;
 order:2;
 .lightning{
@@ -1025,13 +1046,31 @@ order:2;
 .bowl-right-bits{
   display:none;
 }
-.bowl-left{    bottom: -2%;
-  width: 32vw;
-  left:-50px;
+.bowl-left{   bottom: 10%;
+  width: 40vw;
+  left: 6vw;
+  z-index:21;
+  transform:unset !important;
+}
+.hummus {
+   
+  margin-left: unset;
+  left: unset;
+  margin-right: unset;
+  bottom: 3%;
+  width: 50vw;
+  z-index: 22;
+  right: unset;
+  top: unset;
+  transform: unset !important;
+
 }
 
-.bowl-right{
-  right:-20px;
+.bowl-right{z-index:20;
+  bottom: 10%;
+  width: 30vw;
+  right:5vw;
+  transform:unset !important;
 }
   }
   #section-one .container{
@@ -1090,25 +1129,19 @@ order:2;
 
   #section-one {
    
-    justify-content: center;
-
+   /* justify-content: center;*/
+align-items:center;
   }
-  #section-one .hummus {
-    position: relative;
-    order: 2;
-    margin: 90px auto;
-width:40vw;
-}
 
 #location-container .btn-info {
   position: absolute;
   bottom: -3vh;
-  left: 23vw;
+  left: 7vw;
 }
 
 h1{
 
-  font-size: 14vmin;
+  font-size: 16vmin;
 }
 #section-one .lightnings {
   width: 45vw;
@@ -1128,17 +1161,7 @@ transform:scale(0.7, 0.7);
 
 }
 */
-#section-one .bowl-left {
-  width: 42vw;
-  left: 7vw;
-  bottom: 3vh;
-}
 
-#section-one .bowl-right {
-  width: 25vw;
-  bottom: 5vh;
-  right: 10vw;
-}
 
 #section-two .aubergine {
   width: 32vw;
@@ -1152,10 +1175,11 @@ h2{
   font-size: 10vmin;
 }
 
-#location-container .btn-info {
-  position: absolute;
-  bottom: -3vh;
-  left: 33vw;
+.slick-initialized .slick-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #section-three{
