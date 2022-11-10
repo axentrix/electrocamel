@@ -1396,10 +1396,11 @@ section {
   .btn-primary {
     position: absolute;
     bottom: -40px;
-    left: 17%;
     width: 260px;
     height: 79px;
     font-size: 28px;
+    left: 50%;
+    margin-left: -130px;
   }
   .smooth-logo {
     padding-bottom: 70px;
@@ -1473,8 +1474,11 @@ section {
     left: 60%;
     right: 0;
   }
+  #section-six {
+    font-size: 16px;
+  }
   .smalltext {
-    font-size: 12px;
+    font-size: 13px;
   }
   .mobile-carousel .col-md-4 {
     height: 400px;
@@ -1496,7 +1500,8 @@ section {
   #location-container .btn-info {
     position: absolute;
     bottom: -3vh;
-    left: 7vw;
+    left: 50%;
+    margin-left: -112px;
   }
   h1 {
     font-size: 16vmin;
@@ -1549,15 +1554,11 @@ transform:scale(0.7, 0.7);
   #section-three .menu img {
     max-width: 300px;
   }
-  #section-three .menu .btn-primary {
-    position: absolute;
-    bottom: -40px;
-    left: 28%;
-  }
   #section-three .smalltext {
-    width: 60vw;
+    width: 90vw;
     padding-top: 3em;
     padding-bottom: 3em;
+    text-align: center;
   }
   #section-four {
     clip-path: polygon(0 1%, 100% 0, 100% 100%, 0 95%);
